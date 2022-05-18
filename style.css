@@ -1,0 +1,248 @@
+/*=================== STANDARD FORMAT =====================*/ 
+
+body {
+    margin          : 0;
+    padding         : 0;
+    font-family     : sans-serif;
+    font-size       : 16px;
+    font-weight     : 400;
+    background-color: #262626;
+}
+
+p {
+    line-height: 190%;                      
+}
+
+a {
+    text-decoration: none;
+}
+/*=================== MENU TAB =====================*/ 
+
+#menu {
+    background-color: #262626;                  /* NOTE: hexadecimal colour values won't ever have a zero (0) and never the letter O */
+    height          : 100px;
+    font-weight     : 500;
+}
+
+#menu ul {                                        /* we want to style the (unordered) list in the menu tab */
+    margin         : 0;
+    padding        : 0;
+    list-style-type: none;                        /* we want to remove the bullet points of the listed items*/ 
+    text-align     : center;
+}
+
+#menu li {                                        /* to style each listed item */
+    display: inline-block;                        /* rearranges the list items from vertical to horizontal list */
+}
+
+#menu a {                                         /* styling hyperlinks in the div with id "menu" */
+    letter-spacing : 1px;
+    text-decoration: none;                        /* this isn't exactly necessary cos we already made the standard menu hyperlinks to have no text-decorations  in line 18 */
+    text-align     : center;
+    text-transform : uppercase;
+    font-size      : 18px;
+    line-height    : 100px;
+    color          :red;
+
+    padding        : 0 40px;                      /* first value is top & bottom (0) and 2nd val is right & left (40px) */
+    border         : none;
+    display        : block;
+}
+
+#menu a:hover {
+    background-color: #555555;
+}
+
+/*=================== HEADER =====================*/ 
+
+#header {
+    padding         : 0px 0px 15px 0px;              /* padding in a clockwise direction: top, right, bottom, left */
+    background-image: url("images/background_4.png");
+    background-size : contain;
+    background-blend-mode: darken;
+    text-align      : center;
+}
+
+#header img {
+    height: 300px;
+}
+
+#header h1 {
+    letter-spacing: 0.1em;                            /* em is a diff meas of units in css */
+    font-size     : 44px;
+    color         : white;
+}
+
+#header p{
+    letter-spacing: 0.1em;
+    color         : white;
+}
+
+/*=================== PAGE =====================*/ 
+
+#page {                                          /* the div that contains the sidebar and content divs */
+    min-height: 350px;                           /* page height will always be 400px/>, even if the page is empty of content */
+    padding   : 20px;
+    color     : white;
+}
+
+#page h2 {
+    margin-bottom : 12px;
+    font-weight   : 400;
+    font-size     : 18px;
+    color         : #0099FF;
+}
+
+/*========= Content =========*/
+
+#content {
+    float: left;
+    width: 70%;                                     /* limit content size to accomodate space for sidebar */
+}
+
+#content a {
+    color: #0099FF;
+}
+/*========= Sidebar =========*/
+
+#sidebar {
+    float: right;
+    width: 25%;                                     /* 25% in sidebar + 70% of content = 95% page content, which allows the content a 5% margin/padding leeway space */
+}
+
+#sidebar a {
+    color: #dfdede;
+}
+
+#sidebar a:hover {
+    color: red;
+}
+
+/*========= Sidebar: Lists =========*/
+
+ul.styled {                                         /* we style the ul with the class name of "styled" */
+    margin         : 0;
+    padding        : 0;
+    list-style-type: none;                          /* removes the bullet pts */
+}
+
+ul.styled li {                                      /* to style the list items in the ul with class "styled" */
+    border-top: solid 1px #E5E5E5;                /* so each list item will have a border line on top */
+    padding   : 10px 0px;                           /* top & bottom: 14px. right & left: 0px */
+}
+
+/*=================== FOOTER TAB =====================*/ 
+
+#footer {
+    width           : 100%;                          /* the footer tab will be the full width of the page */
+    height          : 360px;
+    background-color: #2B2B2B;
+    padding-top     : 25px;
+    padding-left    : 22px;
+    clear           : both;                          /* this means that footer needs to be come below the div elements prior to it ie. our "content" div that floats to the left & "sidebar" div that floats to the right. If we do not specify clear both, this footer tab will appr below the left & right floaters */
+}
+
+#footer h2 {
+    font-size     : 18px;
+    font-weight   : 400;
+    text-transform: uppercase;
+    color         : white;
+}
+
+#footer p {
+    color: #ADADAD;
+}
+
+#footer a {
+    color: #dfdede;
+}
+
+#footer a:hover {
+    color: red;
+}
+
+/*========= Box1: Latest Posts =========*/
+
+#box1 {
+    width        : 30%;                         /* we divide the footer tab into 3 boxes so 30% per box */
+    float        : left;                        /* thereafter to place the 30% sized boxes next to each other in the same row, we specify float left so that the following box will appr to the left of the previous box */
+    padding-right: 30px;                        /* for some space btwn each box thats in the same row */    
+}
+
+/*========= Box2: Popular Links =========*/
+
+#box2 {
+    width        : 30%;                         /* we divide the footer tab into 3 boxes so 30% per box */
+    float        : left;                        /* thereafter to place the 30% sized boxes next to each other in the same row, we specify float left so that the following box will appr to the left of the previous box */
+    padding-right: 30px;                        /* for some space btwn each box thats in the same row */    
+}
+
+/*========= Box: Follow Us =========*/
+
+#box3 {
+    width       : 30%;                          /* we divide the footer tab into 3 boxes so 30% per box */
+    float       : right;                        /* we float this one to the right cos it needs to be on the right margin of our page */
+    padding-left: 30px;                         /* so that there's spacing btwn box 2 & 3 */
+}
+
+#box3 i {
+    font-size: 40px;
+    color    : white;
+    padding  : 5px;
+}
+
+#box3 i:hover {
+    color: red;                                 /* make icon appr red when cursor hovers over it */
+}
+
+/*=================== COPYRIGHT =====================*/ 
+
+#copyright {
+    width           : 100%;
+    height          : 100px;
+    text-align      : center;
+    background-color: #555555;
+    padding-top     : 55px;
+    clear           : both;                                /* ensures that it will appr below any prior elements floating to the left or right */
+}
+
+#copyright p{
+    font-size     : 16px;
+    letter-spacing: 0.1em;
+    color         : white;
+}
+
+/*=================== GALLERY =====================*/ 
+
+#gallery img {                                              /* we want to images in the div itself, and not the actual div box, so we specify img */
+    width             : 95%;                                /* make the imgs thumbnail-sized */
+    margin            : 12px;                               /* all imgs have the space around them */
+    -moz-transition   : -moz-transform 0.5s ease-in;        /* a type of transition in which the image will ease into view at a speed of 0.5s */
+	-webkit-transition: -webkit-transform 0.5s ease-in;     /* NOTE: we must still specify the func of moz-transition & -webkit-transform below, so these words (after the colon:) will appr in white so to indicate that it is not an inbuilt func recog'd by css */
+	-o-transition     : -o-transform 0.5s ease-in;
+}
+
+#gallery img:hover {                                            
+    -moz-transform   : scale(2.5);                            /* the img will be 3x the thumbnail size when you hover over the img */
+	-webkit-transform: scale(2.5);
+	-o-transform     : scale(2.5);
+}
+
+ul.styled2 {
+    margin         : 0;
+    padding        : 0;
+    list-style-type: none;
+}
+
+ul.styled2 li {
+    border-top: solid .1px red;                           /* add border line above each list item */
+    padding   : 5px 0px; 
+    padding-inline-start: 0%;
+}
+
+#carlist {
+    columns : 3;
+    grid-row: auto;
+}
+
+
